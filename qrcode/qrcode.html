@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>二维码生成器</title>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+		<link type="text/css" rel="stylesheet" href="code.css" />
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+		<script src="jquery.qrcode.js"></script>
+	</head>
+	<body>
+		<h1>QRCode 生成二维码 (可带logo)</h1>
+		<div class="main">
+			<div class="fl make">
+				<p>
+					<span>文本二维码</span>
+					<span class="gray">(制作 网址、邮箱、电话 等二维码)</span>
+				</p>
+				<textarea></textarea>
+				<p class="gray">推荐内容15个字以内,过多可能无法解析</p>
+				<p>生成结果</p>
+				<div id="qrcode"></div>
+			</div>
+			<div class="fr config">
+				<div>相关配置</div>
+				<p class="pzcl">
+					<span class="rotate">></span> 颜色
+				</p>
+				<div class="pzcln">
+					<p>
+						<label>前景色 &nbsp;</label> 
+						<input type="color" value="#000000" class="foreground">
+					</p>
+					<p>
+						<label>背景色 &nbsp;</label>
+						<input type="color" value="#ffffff" class="background">
+					</p>
+				</div>
+				<p class="pzsz">
+					<span class="rotate">></span> 尺寸
+				</p>
+				<div class="pzszn">
+					<label>生成尺寸 </label>
+					<input type="range" min="100" max="400" value="256">&nbsp; 
+					<span class="size">256</span>px
+				</div>
+				<p class="pzlo">
+					<span class="rotate">></span> LOGO设置
+				</p>
+				<div class="pzlon">
+					<div class="logo"></div>
+					<div style="text-align: center;line-height: 35px;">
+						<button class="upBtn">上传LOGO图</button>
+					</div>
+					<input type="file" accept="image/jpeg" style="display: none;" class="upload">
+				</div>
+				<p style="margin-top: 20px;">
+					<button class="fl makeEr">生成二维码</button>
+					<a class="fr gray download">PNG 下载</a>
+				</p>
+			</div>
+			<div id="qrcode"></div>
+		</div>
+		<script src="code.js"></script>
+	</body>
+</html>
