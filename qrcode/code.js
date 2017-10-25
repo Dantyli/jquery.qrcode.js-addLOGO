@@ -18,7 +18,7 @@ $(function() {
 				return window[window.webkitURL ? 'webkitURL' : 'URL']['createObjectURL'](blob);
 			};
 			img.src = getUrl(this.files[0]);
-			$('.logo').append(img);
+			$('.logo').html(img);
 		}
 	})
 	$('.makeEr').on('click', function() {
