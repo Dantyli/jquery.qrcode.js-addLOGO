@@ -36,7 +36,7 @@ $(function() {
 				width: size,
 				height: size,
 				text: con, //内容
-				typeNumber: 3, //计算模式
+				typeNumber: 5, //计算模式
 				correctLevel: 2, //二维码纠错级别
 				background: back, //背景颜色
 				foreground: fore, //二维码颜色
